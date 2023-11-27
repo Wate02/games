@@ -1,3 +1,8 @@
 h1 {
-    background-color: grey;
+    background-color: black;
+    colour: white;
+}
+
+a {
+    color: green;
 }
