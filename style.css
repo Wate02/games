@@ -40,3 +40,10 @@ body {
 #selectedtab {
   color:grey;
 }
+
+#idk {
+
+  display:inline-block; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
