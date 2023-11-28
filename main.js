@@ -20,4 +20,7 @@ function imgtoclipboard() {
 function ctrtt() {
     location.href = 'https://wate02.github.io/Idk2/html5-games/games/ctr-TimeTravel/';
 }
+function gs() {
+    location.href = 'https://wate02.github.io/Idk2/';
+}
 
