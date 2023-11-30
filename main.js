@@ -24,3 +24,6 @@ function gs() {
     location.href = 'https://wate02.github.io/Idk2/html5-games/games/GoogleSnake/index.html';
 }
 
+function esurf() {
+  location.href = 'https://wate02.github.io/Idk2/html5-games/games/edge-surf/';
+}
