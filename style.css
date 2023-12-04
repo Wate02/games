@@ -6,6 +6,7 @@ h1 {
   font-size: 50px;
   padding-left: 20px;
   font-weight: bold;
+  font-family: 'Inter';
   
 }
 
@@ -39,8 +40,9 @@ body {
 } 
 
 #selectedtab {
-  color:grey;
+  color:grey !important;
 }
+
 
 #idk2 {
 
@@ -82,3 +84,22 @@ th, td {
   flex-wrap: wrap;
   
 }
+
+.dark-mode {
+    background-color: #333;
+    color: #fff; 
+    
+}
+
+.dark-mode a {
+  color: #fff !important;
+}
+
+a {
+  color: #000;
+}
+
+#toggleBtn {
+    float: right;
+}
+
