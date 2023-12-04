@@ -28,7 +28,8 @@ body {
 #tabs, a {
   text-decoration: none;
   color:black;
-  padding-left: 20px;
+  padding-left: 0px;
+  padding: 10px;
   
   
 }
@@ -73,4 +74,11 @@ th, td {
 
 #img {
   padding-left: 20px;
+}
+
+#cards {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
 }
