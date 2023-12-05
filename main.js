@@ -1,4 +1,4 @@
-console.log('Hello World!');
+console.log('Js');
 
 function eytiapp2() {
   location.href = 'https://wate02.github.io/Mario64webgl/';
