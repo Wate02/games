@@ -42,9 +42,6 @@ function app1() {
 
 
 
-
-
-
 // Dark Mode
 
 const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
