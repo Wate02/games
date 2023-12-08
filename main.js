@@ -28,7 +28,7 @@ function esurf() {
   location.href = 'https://wate02.github.io/Idk2/html5-games/games/edge-surf/';
 }
 
-function 2048() {
+function app1() {
   location.href = 'https://wate02.github.io/2048html';
 }
 
