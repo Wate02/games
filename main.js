@@ -32,7 +32,9 @@ function app1() {
   location.href = 'https://wate02.github.io/2048html';
 }
 
-
+function slowroads() {
+    location.href = 'https:/https://slowroads.io/';
+  }
 
 
 
