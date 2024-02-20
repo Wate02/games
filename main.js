@@ -33,7 +33,7 @@ function app1() {
 }
 
 function slowroads() {
-    location.href =  '.../';'https://slowroads.io/';
+    window.href =  'https://slowroads.io/';
   }
 
 
