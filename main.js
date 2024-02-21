@@ -36,16 +36,6 @@ function slowroads() {
   location.href = 'https://slowroads.io/';
   }
 
-
-
-
-
-
-
-
-
-
-
 // Dark Mode
 
 const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
