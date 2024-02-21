@@ -36,6 +36,9 @@ function slowroads() {
   location.href = 'https://slowroads.io/';
   }
 
+function sandboxels () {
+ location.href = 'https://wate02.github.io/sandboxels' 
+}
 // Dark Mode
 
 const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
