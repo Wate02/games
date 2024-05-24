@@ -1,98 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>wate02.github.io</title>
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/af7de7fd0e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <nav>
-
     <h1>wate02.github.io</h1>
-    <a href="../index.html"> Main Index</a>
-    <img src="img/moon.png" height="30px" width="30px" id="toggleBtn">
-
+    <div id="tabs">
+      <a id="selectedtab">All</a>
+      <a href="tabs/games.html">Games</a>
+      <a href="tabs/tools.html">Tools</a>
+    </div>
+    <i id="toggleBtn" class="fa-solid fa-moon"></i>
   </nav>
 
-  <table id=main1>
-    <tr>
+  <main>
+    <div class="grid-container">
+      <div class="grid-item" onclick="eytiapp2()">
+        <img src="../img/mario64webgl.png" alt="Mario64">
+        <p>Mario64</p>
+      </div>
+      <div class="grid-item" onclick="sub()">
+        <img src="../img/Sub.png" alt="Subway Surfers">
+        <p>Subway Surfers</p>
+      </div>
+      <div class="grid-item" onclick="emu()">
+        <img src="../img/Emu.png" alt="EmulatorJS">
+        <p>EmulatorJS</p>
+      </div>
+      <div class="grid-item" onclick="imgtoclipboard()">
+        <img src="../img/clip.png" alt="FakeNitro">
+        <p>FakeNitro</p>
+      </div>
+      <div class="grid-item" onclick="ctrtt()">
+        <img src="../img/ctrtt.png" alt="CutTheRope">
+        <p>CutTheRope</p>
+      </div>
+      <div class="grid-item" onclick="gs()">
+        <img src="../img/gs.png" alt="Google Snake">
+        <p>Google Snake</p>
+      </div>
+      <div class="grid-item" onclick="esurf()">
+        <img src="../img/esurf.png" alt="Edge Surf">
+        <p>Edge Surf</p>
+      </div>
+      <div class="grid-item" onclick="app1()">
+        <img src="../img/2048.png" alt="2048">
+        <p>2048</p>
+      </div>
+      <div class="grid-item" onclick="slowroads()">
+        <img src="../img/s.png" alt="Slowroads">
+        <p>Slowroads</p>
+      </div>
+      <div class="grid-item" onclick="sandboxels()">
+        <img src="../img/sandboxels.png" alt="Sandboxels">
+        <p>Sandboxels</p>
+      </div>
+    </div>
 
-      <td>
-        <div id="card1" onclick="test()">
-          <img id="splash" height="100" width="200" src="img/" onclick="test()">
-          <h2>Test</h2>
-          test
-          <br>
-          Play! &rarr;
-        </div>
-      </td>
-
-      <td>
-        <div id="card1">
-          <img id="splash" height="100" width="200" src="img/" onclick="test()">
-          <h2>Test</h2>
-          test
-        </div>
-      </td>
-
-      <td>
-        <div id="card1">
-          <img id="splash" height="100" width="200" src="img/" onclick="test()">
-          <h2>Test</h2>
-          test
-        </div>
-      </td>
-
-      <td>
-        <div id="card1">
-          <img id="splash" height="100" width="200" src="img/" onclick="test()">
-          <h2>Test</h2>
-          test
-        </div>
-      </td>
-    </tr>
-    <tr>
-        <td>
-          <div id="card1">
-            <img id="splash" height="100" width="200" src="img/" onclick="test()">
-            <h2>Test</h2>
-            test
-          </div>
-        </td>
-      
-        <td>
-          <div id="card1">
-            <img id="splash" height="100" width="200" src="img/" onclick="test()">
-            <h2>Test</h2>
-            test
-          </div>
-        </td>
-      
-        <td>
-          <div id="card1">
-            <img id="splash" height="100" width="200" src="img/" onclick="test()">
-            <h2>Test</h2>
-            test
-          </div>
-        </td>
-      
-        <td>
-          <div id="card1">
-            <img id="splash" height="100" width="200" src="img/" onclick="test()">
-            <h2>Test</h2>
-            test
-          </div>
-        </td>
-    </tr>
-  </table>
-
-
+    <div id="cards">
+      <div class="card" onclick="location.href = '/tabs/beta.html';">
+        <b>nichts &rarr; </b>
+        <p>w</p>
+      </div>
+      <div class="card" onclick="location.href = '/';">
+        <b>ta? &rarr; </b>
+        <p>ta</p>
+      </div>
+      <div class="card" onclick="location.href = '/';">
+        <b>talla </b>
+        <p>talla<br>den</p>
+      </div>
+    </div>
+  </main>
 
   <script src="main.js"></script>
 </body>

@@ -1,3 +1,6 @@
+location.href = '/index2/index2.html';
+
+
 console.log('Js');
 
 function eytiapp2() {
