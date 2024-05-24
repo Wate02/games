@@ -1,4 +1,4 @@
-location.href = 'https://wate02.github.io/index2/index2.html';
+location.href = 'https://wate02.github.io/games/index2/index2.html';
 
 
 console.log('Js');
