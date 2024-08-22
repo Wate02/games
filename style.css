@@ -98,7 +98,9 @@ a {
 }
 
 #toggleBtn {
-    float: right;
+  margin-bottom: -6px;
+  padding-left: 10px;
+    /*float: right; */
 }
 
   
