@@ -1,157 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- Ios Webapp -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <link rel="apple-touch-icon" href="">
+  <!-- Ios Webapp -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>wate02.github.io</title>
+    <link rel="stylesheet" href="style.css" media="screen and (min-width: 900px)">
+    <link rel="stylesheet" href="style.css" media="screen and (max-width: 900px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/af7de7fd0e.js" crossorigin="anonymous"></script>
+
+  <title>Wate02.github.io</title>
+  </head>
+    <div class="topnav">
+      <a href="#home" class="active">wate02.github.io</a>
+      <div id="myLinks">
+        <a onclick="func1()">Repository Dierectory</a>
+         <a onclick="about()">(About)</a>
+      </div>
+  
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  
+
+
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-  <script src="https://kit.fontawesome.com/af7de7fd0e.js" crossorigin="anonymous"></script>
 </head>
 
-
 <body>
-  <nav>
-    <h1>wate02.github.io</h1>
-    <div id="tabs"></div>
-    <a id="selectedtab">All</a>
-    <a href="tabs/games.html">Games</a>
-    <a href="tabs/tools.html"> Tools</a>
-    <!--<img src="img/moon.png" height="30px" width="30px" id="toggleBtn"-->
-    <i class="fa-solid fa-moon" height="30px" width="30px" id="toggleBtn"></i>
-    <br>
-  </nav>
-<br>
-  <table>
-    <tr>
-      <td>
-        <div id="content1">
-          <div id="idk" onclick="eytiapp2()">
-            <img src="img/mario64webgl.png" height="90" width="90" onclick="eytiapp()">
-            <br>
-            Mario64
-          </div>
-        </div>
-      </td>
-
-      <td>
-        <div id="idk" onclick="sub()">
-          <img src="img/Sub.png" height="90" width="90" onclick="sub()">
-          <br>
-          <div id="subway">
-            Subway Surfers
-          </div>
-        </div>
-      </td>
-
-      <td>
-        <div id="idk" onclick="emu()">
-          <img src="img/Emu.png" height="90" width="90" onclick="emu()">
-          <br>
-          EmulatorJS
-        </div>
-      </td>
-
-      <td>
-        <div id="idk" onclick="imgtoclipboard()">
-          <img src="img/clip.png" height="90" width="90" onclick="imgtoclipboard()">
-          <br>
-          FakeNitro
-        </div>
-      </td>
-
-      <td>
-        <div id="idk" onclick="ctrtt()">
-          <img src="img/ctrtt.png" height="90" width="90" onclick="ctrtt()">
-          <br>
-          CutTheRope
-        </div>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <div id="idk2" onclick="gs()">
-          <img src="img/gs.png" height="90" width="90" onclick="gs()">
-          <br>
-          Google Snake
-        </div>
-      </td>
-
-      <td>
-        <div id="idk2" onclick="esurf()">
-          <img src="img/esurf.png" height="90" width="90" onclick="esurf()">
-          <br>
-          Edge Surf
-        </div>
-      </td>
-    
-    
-
-      <td>
-        <div id="idk2" onclick="app1()">
-          <img src="img/2048.png" height="90" width="90" onclick="app1()">
-          <br>
-          2048
-        </div>
-      </td>
-
-
-      <td>
-        <div id="idk2" onclick="slowroads()">
-          <img src="img/s.png" height="90" width="90" onclick="slowroads()">
-          <br>
-          Slowroads
-        </div>
-      </td>
-      
-         <td>
-           <div id="idk2" onclick="sandboxels()">
-             <img src="img/sandboxels.png" height="90" width="90" onclick="sandboxels()">
-             <br>
-             Sandboxels
-           </div>
-         </td>
-
-    </tr>
-  </table>
-
-
-<!--div id="cards">
+<div id="cards">
+<div id="card">
   
   
-  <br><br>
-  <div class="card" onclick="location.href = '/tabs/beta.html';">
-    <b>nichts &rarr; </b>
-    <p>
-      w
-    </p>
+  <img id="banner" src="img/totmbanner.png">
+  <img id="icon" src="img/totmicon.png">
+    <h2 id="title">Tomb of the Mask</h2>
+    <text id="white"></text><br>
+    <button onclick="totm()">Play &rarr;</button>
+   
+    
+  </div>
+  
+  <div id="card">
+   <img id="banner" src="img/lobbanner.webp">
+  <img id="icon" src="img/lobicon.jpeg">
+  <h2 id="title">Lands of Blight</h2>
+  <text id="white"></text><br>
+  <button onclick="lob()">Play &rarr;</button>
+  </div>
+  
+     <div id="card">
+  <img id="banner" src="img/bbbanner.jpeg">
+  <img id="icon" src="img/bbicon.png">
+  <h2 id="title">Blocky Blast</h2>
+  <text id="white"></text><br>
+  <button onclick="bb()">Play &rarr;</button>
+  </div>
+  
+  <div id="card">
+      <img id="banner" src="img/dombanner.webp">
+       <img id="icon" src="img/domicon.png">
+       <h2 id="title">Day of Meat</h2>
+       <text id="white"></text><br>
+       <button onclick="dom()">Play &rarr;</button>
+     </div>
+
+</div>
+<!--
+  <div id="card">
+    <h2 id="title">&#43 App Installieren</h2>
+    <text id="white">wate02.github.io kann jetzt als Web-app auf IOS verwendet werden. Clicke dafür auf <img id="shareicon"src="/img/share.png" height="20px" width="15px"> und dann auf "Zum Startbildschirm hinzufügen".<acronym title=""></acronym></text><br>
+    <!--button onclick="func2()">Visit &rarr;</button-->
   </div>
   
   
+  </div>
   
-    <div class="card" onclick="location.href = '/';">
-      <b>ta? &rarr; </b>
-      <p>
-    ta
-      </p>
-    </div>
-    
-       <div class="card" onclick="location.href = '/';">
-         <b>talla </b>
-         <p>
-          talla
-           <br>den
-         </p>
-       </div>
-    
-</div-->
 
-<script src="main.js"></script>
+
+
+
+
+  <!-- Project -->
+  <script src="main.js"></script>
 </body>
 </html>
