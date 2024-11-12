@@ -77,6 +77,10 @@ button {
 
 #title {
   color: white;
+  display: block;
+  margin: 0 auto;
+  margin-top: -40px; 
+  font-weight: bold;
 }
 
 #white {
