@@ -27,6 +27,13 @@ function dom() {
   location.href = 'https://wate02.github.io/BrowserGames/DayOfMeat/';
 }
 
+function domr() {
+  location.href = 'https://wate02.github.io/BrowserGames/DayOfMeat/';
+}
+
+function domc() {
+  location.href = 'https://wate02.github.io/BrowserGames/DayOfMeat/';
+}
 
 // Old Games
 

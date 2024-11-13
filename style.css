@@ -140,3 +140,8 @@ h2{
 place-items: center;
 }
 }
+
+#demo-menu-lower-left {
+  color: white;
+  box-shadow: none;
+}
