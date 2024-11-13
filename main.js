@@ -81,7 +81,7 @@ function func1() {
   location.href = 'https://wate02.github.io/BrowserGames'
 }
 
-function domr()) {
+function domr() {
   location.href = 'https://wate02.github.io/BrowserGames/DayOfMeat/DayOfMeatRadiation/'
 }
 
