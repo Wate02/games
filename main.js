@@ -88,7 +88,6 @@ function domr() {
 function domc() {
   location.href = 'https://wate02.github.io/BrowserGames/DayOfMeat/DayOfMeatCastle/'
 }
-
 //<div id="yellowinfocard"><img id="iicon"src="/img/i.png" height="20px"> wate02.github.io kann jetzt als Web-app auf IOS verwendet werden. Clicke dafür auf <img id="shareicon"src="/img/share.png" height="20px" width="15px"> und dann auf "Zum Startbildschirm hinzufügen".
 //<style> 
 //#shareicon {
