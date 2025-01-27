@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <!-- Ios Webapp -->
+  <!-- Ios Webapp -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="white">
   <link rel="apple-touch-icon" href="">
@@ -11,124 +11,243 @@
   <link rel="manifest" href="img/manifest.json">
   <!-- Android Webapp -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" media="screen and (min-width: 900px)">
-    <link rel="stylesheet" href="style.css" media="screen and (max-width: 900px)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/af7de7fd0e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/af7de7fd0e.js" crossorigin="anonymous"></script>
   <title>Wate02.github.io</title>
-  </head>
-    <div class="topnav">
-      <a href="#home" class="active">wate02.github.io</a>
-      <div id="myLinks">
-        <a onclick="func1()">Repository Dierectory</a>
-      </div>
-  
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-  
+  <style>
+ body {
+  margin: 0;
+  padding: 0;
+  font-size: 15pt; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #1F2937; /* Dark */
+}
 
+#cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Zentriert die Karten */
+}
 
+#card {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #4B5563;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 280px;
+  flex-grow: 1; /* Karten nutzen verfügbaren Platz */
+  flex-basis: 280px; /* Mindestbreite der Karten */
+  background-color: #374151;
+}
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+.topnav {
+  overflow: hidden;
+  background-color: #1F2937; /* Dark */
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: transparent;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #374151; /* Dunkler als Dark */
+  color: #F9FAFB; /* Light */
+}
+
+.active {
+  background-color: transparent;
+  color: white;
+}
+
+button {
+  border-radius: 5px;
+  color: #FFFFFF; /* White */
+  background-color: #3B82F6; /* Primary */
+  border: 0.5px transparent;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#title {
+  color: #FFFFFF; /* White */
+  display: block;
+  margin: 0 auto;
+  margin-top: -40px; 
+  font-weight: bold;
+}
+
+#white {
+  color: #FFFFFF; /* White */
+}
+
+#yellowinfocard {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: left;
+  color: #FFFFFF; /* White */
+  text-decoration: none;
+  border: 1px solid #F59E0B; /* Warning */
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 900px;
+}
+
+@media only screen and (min-width: 600px) {
+  #cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+#banner {
+  width: 100%;
+  height: 130px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#icon {
+  position: relative;
+  top: -45px;
+  height: 80px;
+  width: 80px;
+  margin-left: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 1.3);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #cards {
+    display: grid;
+    place-items: center;
+  }
+}
+
+#demo-menu-lower-left {
+  color: white;
+  box-shadow: none;
+}
+
+.desktopOnly {
+  color: #F59E0B; /* Warning */
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .desktopOnly {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
-<div id="cards">
-<div id="card">
-  
-  
-  <img id="banner" src="img/totmbanner.png">
-  <img id="icon" src="img/totmicon.png">
-    <h2 id="title">Tomb of the Mask</h2>
-    <text id="white"></text><br>
-    <button onclick="totm()">Play &rarr;</button>
-   
-    
+  <div class="topnav">
+    <a href="#home" class="active">wate02.github.io</a>
+    <div id="myLinks">
+      <a onclick="func1()">Repository Dierectory</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
-  
-  <div id="card">
-   <img id="banner" src="img/lobbanner.webp">
-  <img id="icon" src="img/lobicon.jpeg">
-  <h2 id="title">Lands of Blight</h2>
-  <text id="white"></text><br>
-  <button onclick="lob()">Play &rarr;</button>
-  </div>
-  
-  <div id="card">
+
+  <div id="cards">
+    <div id="card">
+      <img id="banner" src="img/totmbanner.png">
+      <img id="icon" src="img/totmicon.png">
+      <h2 id="title">Tomb of the Mask</h2>
+      <text id="white"></text><br>
+      <button onclick="totm()">Play <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div id="card">
+      <img id="banner" src="img/lobbanner.webp">
+      <img id="icon" src="img/lobicon.jpeg">
+      <h2 id="title">Lands of Blight</h2>
+      <text id="white"></text><br>
+      <button onclick="lob()">Play <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div id="card">
       <img id="banner" src="img/dombanner.webp">
-       <img id="icon" src="img/domicon.png">
-       <h2 id="title">Day of Meat</h2>
-       <text id="white"></text><br>
-       <button onclick="dom()">Play &rarr;</button>
-       <button onclick="domr()">Radiation</button>
-       <button onclick="domc()">Castle</button>
-</div>
-     
-     
-<div id="card">
-    <img id="banner" src="img/m64banner.jpeg">
-    <img id="icon" src="img/mario64webgl.png">
-    <h2 id="title">Mario 64 Webgl</h2>
-    <span class="desktopOnly"><i class="fa-solid fa-desktop"></i> Desktop only</span>
-    <text id="white"></text><br>
-    <button onclick="eytiapp2()">Play &rarr;</button>
+      <img id="icon" src="img/domicon.png">
+      <h2 id="title">Day of Meat</h2>
+      <text id="white"></text><br>
+      <button onclick="dom()">Play <i class="fas fa-arrow-right"></i></button>
+      <button onclick="domr()">Radiation</button>
+      <button onclick="domc()">Castle</button>
+    </div>
+
+    <div id="card">
+      <img id="banner" src="img/m64banner.jpeg">
+      <img id="icon" src="img/mario64webgl.png">
+      <h2 id="title">Mario 64 Webgl</h2>
+      <span class="desktopOnly"><i class="fa-solid fa-desktop"></i> Desktop only</span>
+      <text id="white"></text><br>
+      <button onclick="eytiapp2()">Play <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div id="card">
+      <img id="banner" src="img/subwaysurfbanner.png">
+      <img id="icon" src="img/Sub.png">
+      <h2 id="title">Subway Surfers</h2>
+      <span class="desktopOnly"><i class="fa-solid fa-desktop"></i> Desktop only</span>
+      <text id="white"></text><br>
+      <button onclick="sub()">Play <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div id="card">
+      <img id="banner" src="img/bbbanner.jpeg">
+      <img id="icon" src="img/bbicon.png">
+      <h2 id="title">Blocky Blast</h2>
+      <text id="white"></text><br>
+      <button onclick="bb()">Play <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div id="card">
+      <img id="banner" src="img/googlesnakebanner.jpeg">
+      <img id="icon" src="img/googlesnakeicon.jpeg">
+      <h2 id="title">Google Snake</h2>
+      <span class="desktopOnly"><i class="fa-solid fa-desktop"></i> Desktop only</span>
+      <text id="white"></text><br>
+      <button onclick="googs()">Play <i class="fas fa-arrow-right"></i></button>
+    </div>
   </div>
-  
-  
-  <div id="card">
-  <img id="banner" src="img/subwaysurfbanner.png">
-  <img id="icon" src="img/Sub.png">
-  <h2 id="title">Subway Surfers</h2>
-  <span class="desktopOnly"><i class="fa-solid fa-desktop"></i> Desktop only</span>
-  <text id="white"></text><br>
-  <button onclick="sub()">Play &rarr;</button>
-</div>
 
-<div id="card">
-  <img id="banner" src="img/bbbanner.jpeg">
-   <img id="icon" src="img/bbicon.png">
-       <h2 id="title">Blocky Blast</h2>
-       <text id="white"></text><br>
-       <button onclick="bb()">Play &rarr;</button>
- </div>
-
-  <div id="card">
-    <img id="banner" src="img/googlesnakebanner.jpeg">
-    <img id="icon" src="img/googlesnakeicon.jpeg">
-    <h2 id="title">Google Snake</h2>
-    <span class="desktopOnly"><i class="fa-solid fa-desktop"></i> Desktop only</span>
-    <text id="white"></text><br>
-    <button onclick="googs()">Play &rarr;</button>
-  </div>
-     
-     
-     
-     
-     
-
-</div>
-<!--
-  <div id="card">
-    <h2 id="title">&#43 App Installieren</h2>
-    <text id="white">wate02.github.io kann jetzt als Web-app auf IOS verwendet werden. Clicke dafür auf <img id="shareicon"src="/img/share.png" height="20px" width="15px"> und dann auf "Zum Startbildschirm hinzufügen".<acronym title=""></acronym></text><br>
-    <!--button onclick="func2()">Visit &rarr;</button-->
-  </div>
-  
-  
-  </div>
-  
-
-
-
-
-
-  <!-- Project -->
   <script src="main.js"></script>
 </body>
 </html>
