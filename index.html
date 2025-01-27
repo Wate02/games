@@ -25,7 +25,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  background-color: #1F2937; /* Dark */
+  background-color: #1F2937; 
 }
 
 #card {
@@ -38,41 +38,33 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 280px;
-  flex-grow: 1; /* Karten nutzen verfügbaren Platz */
-  flex-basis: 280px; /* Mindestbreite der Karten */
+  flex-grow: 1; 
+  flex-basis: 280px; 
   background-color: #374151;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #1F2937; /* Dark */
-  position: relative;
-}
 
-.topnav #myLinks {
-  display: none;
-}
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
+    .topnav a {
+      color: ##374151; 
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
 
-.topnav a.icon {
-  background: transparent;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+    .dark .topnav a {
+      color: #f3f4f6; 
+    }
 
-.topnav a:hover {
-  background-color: #374151; /* Dunkler als Dark */
-  color: #F9FAFB; /* Light */
-}
+    .topnav .icon {
+      display: none; 
+    }
 
 .active {
   background-color: transparent;
@@ -81,15 +73,15 @@
 
 button {
   border-radius: 5px;
-  color: #FFFFFF; /* White */
-  background-color: #3B82F6; /* Primary */
+  color: #FFFFFF; 
+  background-color: #3B82F6; 
   border: 0.5px transparent;
   padding: 10px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #title {
-  color: #FFFFFF; /* White */
+  color: #FFFFFF; 
   display: block;
   margin: 0 auto;
   margin-top: -40px; 
@@ -97,16 +89,16 @@ button {
 }
 
 #white {
-  color: #FFFFFF; /* White */
+  color: #FFFFFF; 
 }
 
 #yellowinfocard {
   margin: 1rem;
   padding: 1rem;
   text-align: left;
-  color: #FFFFFF; /* White */
+  color: #FFFFFF; 
   text-decoration: none;
-  border: 1px solid #F59E0B; /* Warning */
+  border: 1px solid #F59E0B; 
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 900px;
@@ -156,7 +148,7 @@ h2 {
 }
 
 .desktopOnly {
-  color: #F59E0B; /* Warning */
+  color: #F59E0B; 
   font-size: 12px;
 }
 
@@ -170,9 +162,7 @@ h2 {
 <body>
   <div class="topnav">
     <a href="#home" class="active">wate02.github.io</a>
-    <div id="myLinks">
-      <a onclick="func1()">Repository Dierectory</a>
-    </div>
+   
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
