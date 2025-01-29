@@ -77,6 +77,10 @@ function sandboxels () {
  location.href = 'https://wate02.github.io/sandboxels' 
 }
 
+function twoZeroFourEight() {
+  location.href = 'https://wate02.github.io/2048html'
+}
+
 function func1() {
   location.href = 'https://wate02.github.io/BrowserGames'
 }
