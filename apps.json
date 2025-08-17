@@ -1,0 +1,128 @@
+{
+  "apps": [
+    {
+      "id": 1,
+      "name": "Tomb of the Mask",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/totmicon.png",
+      "redirect": "https://wate02.github.io/BrowserGames/TOTM/"
+    },
+    {
+      "id": 2,
+      "name": "Lands of Blight",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/lobicon.jpeg",
+      "redirect": "https://wate02.github.io/BrowserGames/LandsOfBlight/"
+    },
+    {
+      "id": 3,
+      "name": "Day of Meat",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/domicon.png",
+      "redirect": "https://wate02.github.io/BrowserGames/DayOfMeat/"
+    },
+    {
+      "id": 4,
+      "name": "Mario 64 Webgl",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/mario64webgl.png",
+      "redirect": "https://wate02.github.io/Mario64webgl/"
+    },
+    {
+      "id": 5,
+      "name": "Subway Surfers",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/Sub.png",
+      "redirect": "https://wate02.github.io/Idk2/html5-games/games/subway-surfers-unity/"
+    },
+    {
+      "id": 6,
+      "name": "Blocky Blast",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/bbicon.png",
+      "redirect": "https://wate02.github.io/BrowserGames/BlockyBlast/"
+    },
+    {
+      "id": 7,
+      "name": "FNAF 1",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/fnaficon.jpeg",
+      "redirect": "https://wate02.github.io/FNAF1HTML/"
+    },
+    {
+      "id": 8,
+      "name": "2048",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/2048.png",
+      "redirect": "https://wate02.github.io/2048html/"
+    },
+    {
+      "id": 9,
+      "name": "Google Snake",
+      "subtext": "",
+      "description": "",
+      "icon": "https://wate02.github.io/games/img/googlesnakeicon.jpeg",
+      "banner": "",
+      "redirect": "https://wate02.github.io/Idk2/html5-games/games/GoogleSnake/index.html"
+    },
+    {
+      "id": 10,
+      "name": "Fnaf 2",
+      "subtext": "",
+      "description": "",
+      "icon": "",
+      "redirect": "https://wate02.github.io/FNAF2HTML/"
+    },
+    {
+      "id": 11,
+      "name": "Day of Meat: Radiation",
+      "subtext": "",
+      "description": "",
+      "icon": "",
+      "redirect": "https://wate02.github.io/BrowserGames/DayOfMeat/DayOfMeatRadiation/"
+    },
+    {
+      "id": 12,
+      "name": "Day of Meat: Castle",
+      "subtext": "",
+      "description": "",
+      "icon": "",
+      "redirect": "https://wate02.github.io/BrowserGames/DayOfMeat/DayOfMeatCastle/"
+    }
+  
+    
+  
+  
+    
+  ],
+  "categories": [
+    {
+      "name": "Goated games <i class='fa-solid fa-fire'></i>",
+      "apps": [1, 2, 3, 4]
+    },
+    {
+      "name": "Tower Defense <i class='fa-solid fa-chess-rook'></i>",
+      "apps": [3, 11, 12]
+    },
+    {
+      "name": "Relaxing Games",
+      "apps": [8, 6]
+    },
+    {
+      "name": "Platformer",
+      "apps": [1, 5, 4]
+    },
+    {
+      "name": "Horror",
+      "apps": [7, 10]
+    }
+  ]
+}

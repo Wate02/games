@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --muted: #6b7280;
+      --accent: #3b7a4a;
+      --accent-light: #e9f8ee;
+      --accent-dark: #163d20;
+      --blue-light: #eef6ff;
+      --blue-dark: #0c3a66;
+      --gap: 14px;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+    }
+    
+
+    :root[data-theme='dark'] {
+      --bg: #181c1f;
+      --card-bg: #23272b;
+      --muted: #b0b8c1;
+      --accent: #4ade80;
+      --accent-light: #1a2e22;
+      --accent-dark: #a7ffb0;
+      --blue-light: #1a2333;
+      --blue-dark: #60a5fa;
+      --shadow: 0 4px 12px rgba(0,0,0,0.25);
+      --radius: 12px;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #111;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    
+    body[data-theme='dark'] {
+      color: #e5e7eb;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: none;
+      padding: 20px;
+      margin: 0;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--accent-dark);
+    }
+    
+    .logo-bar {
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 8px 16px;
+      box-shadow: var(--shadow);
+      width: 240px;
+      max-width: 100%;
+    }
+    
+    .search-bar input {
+      border: none;
+      background: transparent;
+      padding: 4px 8px;
+      width: 100%;
+      font-family: 'Inter';
+      font-size: 0.9rem;
+      outline: none;
+    }
+    
+    .content {
+      width: 100%;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--accent-dark);
+    }
+    
+    .section-title .bar {
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    
+    .row {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 4px 0 10px;
+      scrollbar-width: thin;
+      scroll-behavior: smooth;
+    }
+    
+    .row::-webkit-scrollbar-button {
+      display: none;
+    }
+    
+    .row::-webkit-scrollbar {
+      height: 8px;
+    }
+    
+    .row::-webkit-scrollbar-track {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .row::-webkit-scrollbar-thumb {
+      background: linear-gradient(45deg, var(--accent), var(--accent-light));
+      border-radius: 12px;
+      border: 2px solid var(--card-bg);
+      transition: all 0.3s ease;
+    }
+    
+    .row::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(45deg, var(--accent-dark), var(--accent));
+      transform: scale(1.1);
+    }
+    
+    .row::-webkit-scrollbar-thumb:active {
+      background: var(--accent-dark);
+    }
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    
+    ::-webkit-scrollbar-button {
+      display: none;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      border-radius: 12px;
+      border: 2px solid var(--card-bg);
+      transition: all 0.3s ease;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+      box-shadow: 0 2px 8px rgba(59, 122, 74, 0.3);
+    }
+    
+    ::-webkit-scrollbar-thumb:active {
+      background: var(--accent-dark);
+    }
+    
+    ::-webkit-scrollbar-corner {
+      background: var(--card-bg);
+    }
+    
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) var(--card-bg);
+    }
+    
+    .card {
+      min-width: 170px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    
+    .app-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      background: linear-gradient(135deg, #f0fff4, #e9f8ee);
+      color: var(--accent-dark);
+    }
+    
+    .card-meta {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      flex: 1;
+    }
+    
+    .app-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .app-title:hover {
+      color: var(--accent);
+    }
+    
+    .app-size {
+      font-size: 1rem;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .app-size:hover {
+      color: var(--accent);
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      width: 100%;
+    }
+    
+    .tile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+      min-width: 0;
+    }
+    
+    .tile:hover {
+      transform: translateY(-3px);
+    }
+    
+    .tile-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      background: linear-gradient(135deg, #f7fbff, #eef6ff);
+      color: var(--blue-dark);
+      flex-shrink: 0;
+    }
+    
+    .tile-meta {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      flex: 1;
+    }
+    
+    .tile-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .tile-title:hover {
+      color: var(--accent);
+    }
+    
+    .tile-size {
+      font-size: 1rem;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .tile-size:hover {
+      color: var(--accent);
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--muted);
+    }
+    
+    .loading-spinner {
+      border: 3px solid rgba(59, 122, 74, 0.2);
+      border-top: 3px solid var(--accent);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+    
+    .darkmode-toggle {
+      margin-left: 0;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+    
+    .darkmode-toggle input[type="checkbox"] {
+      display: none;
+    }
+    
+    .darkmode-toggle label {
+      cursor: pointer;
+      font-size: 1em;
+      transition: color 0.2s;
+      color: var(--accent-dark);
+    }
+    
+    body[data-theme='dark'] .darkmode-toggle label {
+      color: var(--accent);
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: var(--card-bg);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 70px;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      z-index: 100;
+    }
+
+    .bottom-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 12px;
+      width: 80px;
+      height: 55px;
+      border-radius: var(--radius);
+      transition: all 0.3s;
+    }
+
+    .bottom-nav a i {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .bottom-nav a.active, .bottom-nav a:hover {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    body[data-theme='dark'] .bottom-nav a.active,
+    body[data-theme='dark'] .bottom-nav a:hover {
+      background: #477249;
+      color: #fff;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+      }
+      
+      .search-bar {
+        width: 100%;
+        max-width: none;
+      }
+            
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+      }
+      
+      .card {
+        min-width: 150px;
+      }
+      
+      .darkmode-toggle {
+        margin-left: 0;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
+      
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      
+      .card {
+        min-width: 140px;
+      }
+      
+      .app-icon, .tile-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+      }
+      
+      .app-title, .tile-title {
+        font-size: 13px;
+      }
+      
+      .app-size, .tile-size {
+        font-size: 11px;
+      }
+      
+      .section-title {
+        font-size: 1rem;
+      }
+      
+      .logo {
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .container {
+        padding: 8px;
+      }
+      
+      .card, .tile {
+        padding: 8px;
+        gap: 8px;
+      }
+      
+      .app-icon, .tile-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    }
+    
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1400px;
+        padding: 30px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        wate02.github.io
+        <div class="darkmode-toggle">
+          <input type="checkbox" id="darkmode-switch" />
+          <label for="darkmode-switch" title="Darkmode umschalten"><i class="fa-solid fa-moon"></i></label>
+        </div>
+      </div>
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" placeholder="Suche...">
+      </div>
+    </header>
+    
+    <main class="content" id="app-container">
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <p>Lade Apps...</p>
+      </div>
+    </main>
+    
+
+    <div class="bottom-nav">
+    <a href="#" class="active"><i class="fas fa-compass"></i>Discover</a>
+    <a href="all.html"><i class="fas fa-plus"></i>All</a>
+    <a href="favorites.html"><i class="fas fa-star"></i>Favorites</a>
+    <a href="#"><i class="fas fa-cog"></i>Settings</a>
+    
+</div>
+    <footer>
+     
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const appContainer = document.getElementById('app-container');
+      const fetchAppData = async () => {
+        try {
+          const response = await fetch('apps.json');
+          if (!response.ok) throw new Error('Network response was not ok');
+          return await response.json();
+        } catch (error) {
+          console.error('Error fetching app data:', error);
+          appContainer.innerHTML = `
+            <div class="loading">
+              <p>Fehler beim Laden der App-Daten.</p>
+            </div>
+          `;
+          return null;
+        }
+      };
+      
+      const getInitials = (name) => {
+        const words = name.split(' ');
+        let initials = '';
+        for (let i = 0; i < Math.min(2, words.length); i++) {
+          initials += words[i][0].toUpperCase();
+        }
+        return initials;
+      };
+      
+      const renderAppSections = (data) => {
+        if (!data || !data.categories || !data.apps) {
+          appContainer.innerHTML = `
+            <div class="loading">
+              <p>Ungültiges Datenformat.</p>
+            </div>
+          `;
+          return;
+        }
+        
+        appContainer.innerHTML = '';
+        
+        data.categories.forEach(category => {
+          const section = document.createElement('section');
+          section.className = 'section';
+          section.innerHTML = `
+            <h2 class="section-title">
+              <span class="bar"></span>${category.name}
+            </h2>
+          `;
+          
+          let wrapper;
+          if (category.name === 'Productivity') {
+            wrapper = document.createElement('div');
+            wrapper.className = 'grid';
+          } else {
+            wrapper = document.createElement('div');
+            wrapper.className = 'row';
+          }
+          
+          category.apps.forEach(appId => {
+            const app = data.apps.find(a => a.id === appId);
+            if (!app) return;
+
+            if (category.name === 'Productivity') {
+              const tile = document.createElement('div');
+              tile.className = 'tile';
+
+              let iconHtml;
+              if (app.icon && app.icon.trim() !== "") {
+                iconHtml = `<img class="tile-icon" src="${app.icon}" alt="${app.name}" style="object-fit:cover;" />`;
+              } else {
+                iconHtml = `<div class="tile-icon">${getInitials(app.name)}</div>`;
+              }
+
+              tile.innerHTML = `
+                ${iconHtml}
+                <div class="tile-meta">
+                  <div class="tile-title">${app.name}</div>
+                  <div class="tile-size">${app.subtext}</div>
+                </div>
+              `;
+
+              const iconElem = tile.querySelector('.tile-icon');
+              iconElem.style.cursor = 'pointer';
+              iconElem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.open(app.redirect, '_blank');
+              });
+
+              const titleElem = tile.querySelector('.tile-title');
+              const sizeElem = tile.querySelector('.tile-size');
+
+              titleElem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.location.href = `desc.html?id=${app.id}`;
+              });
+
+              sizeElem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.location.href = `desc.html?id=${app.id}`;
+              });
+
+              wrapper.appendChild(tile);
+            } else {
+              const card = document.createElement('div');
+              card.className = 'card';
+
+              let iconHtml;
+              if (app.icon && app.icon.trim() !== "") {
+                iconHtml = `<img class="app-icon" src="${app.icon}" alt="${app.name}" style="object-fit:cover;" />`;
+              } else {
+                iconHtml = `<div class="app-icon">${getInitials(app.name)}</div>`;
+              }
+
+              card.innerHTML = `
+                ${iconHtml}
+                <div class="card-meta">
+                  <div class="app-title">${app.name}</div>
+                  <div class="app-size">${app.subtext}</div>
+                </div>
+              `;
+
+              const iconElem = card.querySelector('.app-icon');
+              iconElem.style.cursor = 'pointer';
+              iconElem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.open(app.redirect, '_blank');
+              });
+
+              const titleElem = card.querySelector('.app-title');
+              const sizeElem = card.querySelector('.app-size');
+
+              titleElem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.location.href = `desc.html?id=${app.id}`;
+              });
+
+              sizeElem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.location.href = `desc.html?id=${app.id}`;
+              });
+
+              wrapper.appendChild(card);
+            }
+          });
+          
+          section.appendChild(wrapper);
+          appContainer.appendChild(section);
+        });
+      };
+      
+      const loadAppData = async () => {
+        const appData = await fetchAppData();
+        if (appData) {
+          renderAppSections(appData);
+        }
+      };
+      
+      loadAppData();
+      
+      const searchInput = document.querySelector('.search-bar input');
+      searchInput.addEventListener('input', async (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const appData = await fetchAppData();
+        if (!appData) return;
+        
+        if (searchTerm.length === 0) {
+          renderAppSections(appData);
+          return;
+        }
+        
+        const filteredApps = appData.apps.filter(app => 
+          app.name.toLowerCase().includes(searchTerm)
+        );
+        
+        if (filteredApps.length > 0) {
+          appContainer.innerHTML = '';
+          const section = document.createElement('section');
+          section.className = 'section';
+          section.innerHTML = `
+            <h2 class="section-title">
+              <span class="bar"></span>Suchergebnisse
+            </h2>
+          `;
+          
+          const wrapper = document.createElement('div');
+          wrapper.className = 'grid';
+          
+          filteredApps.forEach(app => {
+            const tile = document.createElement('div');
+            tile.className = 'tile';
+
+            let iconHtml;
+            if (app.icon && app.icon.trim() !== "") {
+              iconHtml = `<img class="tile-icon" src="${app.icon}" alt="${app.name}" style="object-fit:cover;" />`;
+            } else {
+              iconHtml = `<div class="tile-icon">${getInitials(app.name)}</div>`;
+            }
+
+            tile.innerHTML = `
+              ${iconHtml}
+              <div class="tile-meta">
+                <div class="tile-title">${app.name}</div>
+                <div class="tile-size">${app.subtext}</div>
+              </div>
+            `;
+
+            const iconElem = tile.querySelector('.tile-icon');
+            iconElem.style.cursor = 'pointer';
+            iconElem.addEventListener('click', (e) => {
+              e.stopPropagation();
+              window.open(app.redirect, '_blank');
+            });
+
+            const titleElem = tile.querySelector('.tile-title');
+            const sizeElem = tile.querySelector('.tile-size');
+
+            titleElem.addEventListener('click', (e) => {
+              e.stopPropagation();
+              window.location.href = `desc.html?id=${app.id}`;
+            });
+
+            sizeElem.addEventListener('click', (e) => {
+              e.stopPropagation();
+              window.location.href = `desc.html?id=${app.id}`;
+            });
+
+            wrapper.appendChild(tile);
+          });
+          
+          section.appendChild(wrapper);
+          appContainer.appendChild(section);
+        } else {
+          appContainer.innerHTML = `
+            <div class="loading">
+              <p>Keine Apps gefunden für "${searchTerm}"</p>
+            </div>
+          `;
+        }
+      });
+    });
+    
+    const darkSwitch = document.getElementById('darkmode-switch');
+    const setTheme = (theme) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.body.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    };
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      darkSwitch.checked = true;
+      setTheme('dark');
+    }
+    darkSwitch.addEventListener('change', (e) => {
+      setTheme(e.target.checked ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
