@@ -24,6 +24,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/domicon.png",
+      "banner": "https://raw.githubusercontent.com/Wate02/games/refs/heads/V6/img/dombanner.webp",
       "redirect": "https://wate02.github.io/BrowserGames/DayOfMeat/"
     },
     {
@@ -32,6 +33,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/mario64webgl.png",
+      "banner": "https://github.com/Wate02/games/blob/V6/img/m64banner.jpeg?raw=true",
       "redirect": "https://wate02.github.io/Mario64webgl/"
     },
     {
@@ -40,6 +42,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/Sub.png",
+      "banner": "https://github.com/Wate02/games/blob/V6/img/subwaysurfbanner.png?raw=true",
       "redirect": "https://wate02.github.io/Idk2/html5-games/games/subway-surfers-unity/"
     },
     {
@@ -48,6 +51,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/bbicon.png",
+      "banner": "https://github.com/Wate02/games/blob/V6/img/bbbanner.jpeg?raw=true",
       "redirect": "https://wate02.github.io/BrowserGames/BlockyBlast/"
     },
     {
@@ -56,6 +60,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/fnaficon.jpeg",
+      "banner": "https://raw.githubusercontent.com/Wate02/games/refs/heads/V6/img/fnafbanner.webp",
       "redirect": "https://wate02.github.io/FNAF1HTML/"
     },
     {
@@ -64,6 +69,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/2048.png",
+      "banner": "https://github.com/Wate02/games/blob/V6/img/2048banner.jpeg?raw=true",
       "redirect": "https://wate02.github.io/2048html/"
     },
     {
@@ -72,7 +78,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/googlesnakeicon.jpeg",
-      "banner": "",
+      "banner": "https://github.com/Wate02/games/blob/V6/img/googlesnakebanner.jpeg?raw=true",
       "redirect": "https://wate02.github.io/Idk2/html5-games/games/GoogleSnake/index.html"
     },
     {
@@ -128,4 +134,5 @@
     }
   ]
 }
+
 
