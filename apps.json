@@ -6,6 +6,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/totmicon.png",
+      "banner": "https://github.com/Wate02/games/blob/V6/img/totmbanner.png?raw=true",
       "redirect": "https://wate02.github.io/BrowserGames/TOTM/"
     },
     {
@@ -14,6 +15,7 @@
       "subtext": "",
       "description": "",
       "icon": "https://wate02.github.io/games/img/lobicon.jpeg",
+      "banner": "https://raw.githubusercontent.com/Wate02/games/refs/heads/V6/img/lobbanner.webp",
       "redirect": "https://wate02.github.io/BrowserGames/LandsOfBlight/"
     },
     {
@@ -126,3 +128,4 @@
     }
   ]
 }
+
