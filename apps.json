@@ -121,6 +121,14 @@
       "description": "",
       "icon": "https://raw.githubusercontent.com/Wate02/Idk2/refs/heads/main/html5-games/games/chrome-dino/favicon.ico",
       "redirect": "https://wate02.github.io/Idk2/html5-games/games/chrome-dino/"
+    },
+    {
+      "id": 15,
+      "name": "Digger Escape",
+      "subtext": "",
+      "description": "",
+      "icon": "https://img.poki-cdn.com/cdn-cgi/image/f=auto/35744df8e65ff2654528927d6b0396db/digger-escape.png",
+      "redirect": "#"
     }
   
     
@@ -131,7 +139,7 @@
   "categories": [
     {
       "name": "Newly added <i class='fa-solid fa-seedling'></i>",
-      "apps": [14, 13]
+      "apps": [15, 14, 13]
     },
     {
       "name": "Tower Defense <i class='fa-solid fa-chess-rook'></i>",
@@ -151,6 +159,7 @@
     }
   ]
 }
+
 
 
 
