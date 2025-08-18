@@ -86,7 +86,7 @@
       "name": "Fnaf 2",
       "subtext": "",
       "description": "",
-      "icon": "",
+      "icon": "https://play-lh.googleusercontent.com/GYcyLlHWoZumcal0WmDJJo2rCFyl3Y0mwXm0zaD-C9gC0PJGQMhzOKHfDUVlqSDlag=w240-h480-rw",
       "redirect": "https://wate02.github.io/FNAF2HTML/"
     },
     {
@@ -94,7 +94,7 @@
       "name": "Day of Meat: Radiation",
       "subtext": "",
       "description": "",
-      "icon": "",
+      "icon": "https://tse1.mm.bing.net/th/id/OIP.5C6mw4IvSvXpu6-O43x4_wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "redirect": "https://wate02.github.io/BrowserGames/DayOfMeat/DayOfMeatRadiation/"
     },
     {
@@ -102,7 +102,7 @@
       "name": "Day of Meat: Castle",
       "subtext": "",
       "description": "",
-      "icon": "",
+      "icon": "https://tse3.mm.bing.net/th/id/OIP.0wUoApBYoMZDCIAqWojLhQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "redirect": "https://wate02.github.io/BrowserGames/DayOfMeat/DayOfMeatCastle/"
     },
     {
@@ -110,8 +110,25 @@
       "name": "FNaF World",
       "subtext": "",
       "description": "",
-      "icon": "",
+      "icon": "https://static.wikia.nocookie.net/freddy-fazbears-pizza/images/4/47/Fnaf-world-android.jpg/revision/latest/scale-to-width-down/256?cb=20240519225852",
+      "banner": "https://m.gjcdn.net/game-header/2600/124921-k9fskac8-v4.webp",
       "redirect": "https://wate02.github.io/hd_fnaf/w/"
+    },
+    {
+      "id": 14,
+      "name": "Chrome Dino",
+      "subtext": "",
+      "description": "",
+      "icon": "https://raw.githubusercontent.com/Wate02/Idk2/refs/heads/main/html5-games/games/chrome-dino/favicon.ico",
+      "redirect": "https://wate02.github.io/Idk2/html5-games/games/chrome-dino/"
+    },
+    {
+      "id": 15,
+      "name": "Chrome Dino",
+      "subtext": "",
+      "description": "",
+      "icon": "https://raw.githubusercontent.com/Wate02/Idk2/refs/heads/main/html5-games/games/chrome-dino/favicon.ico",
+      "redirect": "https://wate02.github.io/Idk2/html5-games/games/chrome-dino/"
     }
   
     
@@ -121,8 +138,8 @@
   ],
   "categories": [
     {
-      "name": "Goated games <i class='fa-solid fa-fire'></i>",
-      "apps": [1, 2, 3, 4]
+      "name": "Newly added <i class='fa-solid fa-seedling'></i>",
+      "apps": [15, 14, 13]
     },
     {
       "name": "Tower Defense <i class='fa-solid fa-chess-rook'></i>",
@@ -142,6 +159,7 @@
     }
   ]
 }
+
 
 
 
