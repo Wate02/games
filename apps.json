@@ -121,16 +121,7 @@
       "description": "",
       "icon": "https://raw.githubusercontent.com/Wate02/Idk2/refs/heads/main/html5-games/games/chrome-dino/favicon.ico",
       "redirect": "https://wate02.github.io/Idk2/html5-games/games/chrome-dino/"
-    },
-    {
-      "id": 15,
-      "name": "Digger Escape",
-      "subtext": "",
-      "description": "",
-      "icon": "https://img.poki-cdn.com/cdn-cgi/image/f=auto/35744df8e65ff2654528927d6b0396db/digger-escape.png",
-      "redirect": "https://wate02.github.io/BrowserGames/Digger%20Escape/"
     }
-  
     
   
   
@@ -159,6 +150,7 @@
     }
   ]
 }
+
 
 
 
