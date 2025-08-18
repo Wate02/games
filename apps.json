@@ -121,14 +121,6 @@
       "description": "",
       "icon": "https://raw.githubusercontent.com/Wate02/Idk2/refs/heads/main/html5-games/games/chrome-dino/favicon.ico",
       "redirect": "https://wate02.github.io/Idk2/html5-games/games/chrome-dino/"
-    },
-    {
-      "id": 15,
-      "name": "Chrome Dino",
-      "subtext": "",
-      "description": "",
-      "icon": "https://raw.githubusercontent.com/Wate02/Idk2/refs/heads/main/html5-games/games/chrome-dino/favicon.ico",
-      "redirect": "https://wate02.github.io/Idk2/html5-games/games/chrome-dino/"
     }
   
     
@@ -139,7 +131,7 @@
   "categories": [
     {
       "name": "Newly added <i class='fa-solid fa-seedling'></i>",
-      "apps": [15, 14, 13]
+      "apps": [14, 13]
     },
     {
       "name": "Tower Defense <i class='fa-solid fa-chess-rook'></i>",
@@ -159,6 +151,7 @@
     }
   ]
 }
+
 
 
 
