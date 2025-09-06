@@ -142,8 +142,10 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 20px;
+            /*background: var(--card-bg);*/
             border-radius: var(--radius);
             padding: 20px;
+           /* box-shadow: var(--shadow);*/
             gap: 20px;
         }
         
@@ -248,8 +250,10 @@
         
         .description {
             margin-top: 20px;
+           /* background: var(--card-bg);*/
             border-radius: var(--radius);
             padding: 24px;
+            /*box-shadow: var(--shadow);*/
         }
 
         .description h3 {
@@ -277,7 +281,104 @@
             line-height: 1.6;
         }
 
-        /* Responsive styling omitted for brevity (unchanged) */
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header {
+                padding: 15px;
+            }
+
+            .banner {
+                height: 25vh;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+            }
+            
+            .icon-name {
+                align-self: flex-start;
+            }
+
+            .action-buttons {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .play-button {
+                flex: 1;
+                justify-content: center;
+                padding: 14px 20px;
+            }
+
+            .icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .name {
+                font-size: 1.3rem;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .description {
+                margin-top: 15px;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .header {
+                padding: 12px;
+            }
+
+            .banner {
+                height: 20vh;
+            }
+            
+            .info-row {
+                padding: 16px;
+                gap: 12px;
+            }
+
+            .icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .name {
+                font-size: 1.2rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .description {
+                padding: 16px;
+            }
+
+            .description h3 {
+                font-size: 1.1rem;
+            }
+
+            .description p {
+                font-size: 0.95rem;
+            }
+        }
+
 
         ::-webkit-scrollbar {
             width: 8px;
@@ -308,11 +409,11 @@
     <div class="header">
         <button class="back-button" onclick="window.history.back()">
             <i class="fas fa-arrow-left"></i>
-            <span href="index.html">Back</span>
+           <span href="index.html">Back</span>
         </button>
         <div class="darkmode-toggle">
             <input type="checkbox" id="darkmode-switch" />
-            <label for="darkmode-switch" title="Toggle Dark Mode">
+            <label for="darkmode-switch" title="Toggle Darkmode">
                 <i class="fa-solid fa-moon"></i>
             </label>
         </div>
@@ -327,7 +428,7 @@
             <div class="icon-name">
                 <img class="icon" src="https://wate02.github.io/games/img/replace-this-with-icon" alt="Icon">
                 <div class="name-section">
-                    <h2 id="name" class="name">Loading...</h2>
+                    <h2 id="name" class="name">gimme sum time...</h2>
                     <div class="subtitle">-</div>
                 </div>
             </div>
@@ -343,11 +444,15 @@
         </div>
 
         <div class="description">
-            <p id="desc-text"></p>
+
+            <p id="desc-text">
+
+            </p>
         </div>
     </div>
 
     <script>
+
         const darkSwitch = document.getElementById('darkmode-switch');
         const setTheme = (theme) => {
             document.documentElement.setAttribute('data-theme', theme);
@@ -367,6 +472,7 @@
             const url = new URL(window.location.href);
             return url.searchParams.get(name);
         }
+
 
         function getFavorites() {
             const fav = document.cookie.split('; ').find(row => row.startsWith('favorites='));
@@ -427,7 +533,7 @@
                 }
 
                 const res = await fetch('apps.json');
-                if (!res.ok) throw new Error('Failed to load app data');
+                if (!res.ok) throw new Error('Error loading app data');
                 
                 const data = await res.json();
                 const app = data.apps.find(a => a.id === id);
@@ -438,19 +544,23 @@
                     return;
                 }
 
+
                 const bannerImg = document.querySelector('.banner img');
                 if (app.banner) {
                     bannerImg.src = app.banner;
                     bannerImg.alt = app.name + " Banner";
                 } else {
+
                     bannerImg.style.display = 'none';
                 }
+
 
                 const iconImg = document.querySelector('.icon');
                 if (app.icon) {
                     iconImg.src = app.icon;
                     iconImg.alt = app.name + " Icon";
                 } else {
+
                     const initials = app.name.split(' ').map(word => word[0]).join('').substring(0, 2).toUpperCase();
                     iconImg.style.display = 'none';
                     const iconDiv = document.createElement('div');
@@ -466,9 +576,11 @@
                     iconImg.parentNode.replaceChild(iconDiv, iconImg);
                 }
 
+
                 document.getElementById('name').textContent = app.name;
                 document.querySelector('.subtitle').textContent = app.subtext || '';
                 document.getElementById('desc-text').textContent = app.description || '';
+
 
                 document.querySelector('.play-button').onclick = () => {
                     if (app.redirect) {
@@ -482,10 +594,11 @@
             } catch (error) {
                 console.error('Error loading app:', error);
                 document.getElementById('name').textContent = 'Loading Error';
-                document.getElementById('desc-text').textContent = 'An error occurred while loading app data.';
+                document.getElementById('desc-text').textContent = 'An error occurred while loading the app data.';
             }
         }
         window.addEventListener('DOMContentLoaded', loadApp);
     </script>
 </body>
+
 </html>
