@@ -121,6 +121,22 @@
       "description": "",
       "icon": "https://raw.githubusercontent.com/Wate02/Idk2/refs/heads/main/html5-games/games/chrome-dino/favicon.ico",
       "redirect": "https://wate02.github.io/Idk2/html5-games/games/chrome-dino/"
+    },
+    {
+      "id": 15,
+      "name": "FNaF 3",
+      "subtext": "",
+      "description": "",
+      "icon": "https://github.com/Wate02/hd_fnaf/blob/main/3/logo.webp?raw=true",
+      "redirect": "https://wate02.github.io/hd_fnaf/3/"
+    },
+    {
+      "id": 16,
+      "name": "FNaF 4",
+      "subtext": "",
+      "description": "",
+      "icon": "https://github.com/Wate02/hd_fnaf/blob/main/4/logo.webp?raw=true",
+      "redirect": "https://wate02.github.io/hd_fnaf/4/"
     }
     
   
@@ -130,7 +146,7 @@
   "categories": [
     {
       "name": "Newly added <i class='fa-solid fa-seedling'></i>",
-      "apps": [15, 14, 13]
+      "apps": [16, 15, 14, 13]
     },
     {
       "name": "Tower Defense <i class='fa-solid fa-chess-rook'></i>",
@@ -150,6 +166,7 @@
     }
   ]
 }
+
 
 
 
