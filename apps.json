@@ -146,7 +146,7 @@
   "categories": [
     {
       "name": "Newly added <i class='fa-solid fa-seedling'></i>",
-      "apps": [16, 15, 14, 13]
+      "apps": [16, 15, 14]
     },
     {
       "name": "Tower Defense <i class='fa-solid fa-chess-rook'></i>",
@@ -166,6 +166,7 @@
     }
   ]
 }
+
 
 
 
